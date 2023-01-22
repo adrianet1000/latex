@@ -1,0 +1,60 @@
+\section{CARACTERES PROHIBIDOS}
+
+Hay unos cuantos caracteres que tienen un
+significado particular en \LaTeX~y, por lo tanto,
+no los podemos usar directamente en nuestros documentos.
+
+\begin{verbatim}
+\
+%
+{
+}
+$
+#
+&
+^
+~
+_
+\end{verbatim}
+
+Si queremos escribir un backslash podemos escribirlo invocando su codigo
+
+\begin{verbatim}
+\textbackslash
+\end{verbatim}
+
+Luego los demas simbolos los escribimos anteponiendo el simbolo de backslash.
+
+Esta información fue extraida de la pagina web.
+
+\url{http://elclubdelautodidacta.es/wp/2011/08/latex-capitulo-10-caracteres-prohibidos/}
+
+El simbolo de la tilde \~{} genera un espacio en blanco. Para generar ese simbolo
+debe agregarse el simbolo backslash antes de escribir la tilde.
+
+\section{error de coloreado de syntaxis en el entorno lstlisting}
+
+cuando estamos en el entorno lstlisting por ejemplo haciendo un ejemplo de
+codigo de csharp luego de hacer un comenario seguido del simbolo de dolar o lo que
+se conoce como plantilla literales, luego el texto en latex dentro del
+editor vim dentro de windows terminal previou nos colorea todo como texto
+a partir del simbolo de dolar. una solución es luego finalizado el entorno
+lstlisting poner inmediatamente como comentario de latex lo siguiente
+
+\begin{verbatim}
+%stopzone
+\end{verbatim}
+
+\section{syntax en latex}
+
+Una forma de saber la sintaxis que se se esta utilizando en vim para colorear
+es invocando la configuración syntax de la siguiente manera.
+
+:set syntax?
+
+esto nos dira con que sintaxis se esta pintando el codigo que estamos
+escribiendo
+
+:set syntax=tex
+
+Esta intrucción pintara el codigo en codigo latex
